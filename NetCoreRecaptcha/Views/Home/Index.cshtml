@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+        <html>
+
+
+        <head>
+            <script type="text/javascript">
+                var onloadCallback = function () {
+                    grecaptcha.render('html_element', {
+                        'sitekey': '6Le2g-UUAAAAAJe8qUgDFlu6TFvcDUz6j3pma22j'
+                    });
+                };
+            </script>
+            <title>reCAPTCHA demo: Simple page</title>
+           
+        </head>
+        <body>
+            <form action="@Url.Action("SendRecaptcha", "Home")" method="POST">
+                <div id="html_element"></div>
+                <br>
+                <input type="submit" value="Submit">
+
+            </form>
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                    async defer>
+            </script>
+        </body>
+        </html>
+
+     
